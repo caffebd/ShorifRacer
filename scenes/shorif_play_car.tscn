@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://b6dvokhhpaa34"]
+
+[ext_resource type="Script" path="res://scripts/shorif_play_car.gd" id="1_pd8es"]
+[ext_resource type="Texture2D" uid="uid://c1f70054pofjm" path="res://assets/texture_09.png" id="2_74tjv"]
+[ext_resource type="PackedScene" uid="uid://8kiyl0u4ylwx" path="res://assets/shorf_rotated.tscn" id="3_5akuc"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_87ajp"]
+bounce = 0.05
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_g3d32"]
+radius = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vviip"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.643137)
+albedo_texture = ExtResource("2_74tjv")
+uv1_scale = Vector3(6, 3, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_1sdtt"]
+material = SubResource("StandardMaterial3D_vviip")
+radius = 1.0
+height = 2.0
+
+[node name="ShorifPlayCar" type="RigidBody3D"]
+collision_layer = 2
+mass = 0.75
+physics_material_override = SubResource("PhysicsMaterial_87ajp")
+gravity_scale = 3.0
+angular_damp = 12.0
+script = ExtResource("1_pd8es")
+
+[node name="SphereColl" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_g3d32")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SphereColl"]
+visible = false
+mesh = SubResource("SphereMesh_1sdtt")
+
+[node name="Game_car" parent="." instance=ExtResource("3_5akuc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.045, 0, -0.115)
+top_level = true
+
+[node name="RayCast3D" type="RayCast3D" parent="Game_car"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+target_position = Vector3(0, -0.8, 0)

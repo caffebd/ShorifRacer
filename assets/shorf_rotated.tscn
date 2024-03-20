@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://8kiyl0u4ylwx"]
+
+[ext_resource type="PackedScene" uid="uid://crxsh7xk1m8vh" path="res://assets/Game_car.glb" id="1_gn813"]
+
+[node name="Game_car" instance=ExtResource("1_gn813")]
+
+[node name="Cube" parent="." index="0"]
+transform = Transform3D(-1, 0, -1.66455e-07, 0, 1, 0, 8.74228e-08, 0, -1.90402, 0, 0, 0)
+
+[node name="Cube_001" parent="." index="1"]
+transform = Transform3D(0.0342894, 0, 0, 0, 0.0267593, 0, 0, 0, 0.132111, 0.934, 0.849, 1.208)
+
+[node name="Cube_002" parent="." index="2"]
+transform = Transform3D(-0.0342894, -2.33937e-09, 0, 2.99768e-09, -0.0267593, 0, 0, 0, 0.132111, -0.926413, 0.866601, 1.20767)
+
+[node name="Cube_003" parent="." index="3"]
+transform = Transform3D(0.0342894, 0, 0, 0, 0.0267593, 0, 0, 0, 0.132111, 0.876833, 0.881321, 0.474267)
+
+[node name="Cube_004" parent="." index="4"]
+transform = Transform3D(-0.0342894, -2.33937e-09, 0, 2.99768e-09, -0.0267593, 0, 0, 0, 0.132111, -0.931, 0.899, 0.474)
+
+[node name="Cylinder_005" parent="." index="8"]
+transform = Transform3D(0.222023, 0, 0, 0, 0, -0.222023, 0, 0.161573, 0, 0.348944, 0.564468, -1.86721)
+
+[node name="Cylinder_013" parent="." index="9"]
+transform = Transform3D(0, -0.0922305, 0, 0.33657, 0, 0, 0, 0, 0.33657, -0.796381, 0.43133, -1.19989)
+
+[node name="Cylinder_006" parent="." index="10"]
+transform = Transform3D(0, -0.0922305, 0, 0.33657, 0, 0, 0, 0, 0.33657, -0.796381, 0.43133, 1.36477)
+
+[node name="Cylinder_008" parent="." index="11"]
+transform = Transform3D(0, 0.0922305, 0, -0.33657, 0, 0, 0, 0, 0.33657, 0.82, 0.431, -1.2)
+
+[node name="Cylinder_009" parent="." index="12"]
+transform = Transform3D(0, 0.0922305, 0, -0.33657, 0, 0, 0, 0, 0.33657, 0.82, 0.431, 1.35396)
